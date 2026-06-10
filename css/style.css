@@ -109,6 +109,7 @@ ul { list-style: none; }
 .header__phone {
   font-size: 15px; font-weight: 700; color: var(--white);
   display: flex; align-items: center; gap: 7px;
+  white-space: nowrap;
 }
 .header__phone svg { color: var(--gold); }
 .burger {
