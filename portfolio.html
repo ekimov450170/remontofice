@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио UniGroup — примеры ремонта коммерческих помещений в Москве</title>
+  <meta name="description" content="Реализованные проекты UniGroup: ремонт офисов, ресторанов, гостиниц и магазинов в Москве. Площади, сроки, бюджеты и описания реальных объектов. 370+ завершённых проектов.">
+  <link rel="canonical" href="https://ремонтофиса.москва/portfolio.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Портфолио UniGroup — ремонт коммерческих помещений",
+    "url": "https://ремонтофиса.москва/portfolio.html",
+    "description": "Реализованные проекты по ремонту офисов, ресторанов, гостиниц и торговых помещений в Москве",
+    "provider": { "@type": "Organization", "name": "UniGroup" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: #fff; padding: 72px 0 64px; }
+    .page-hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 16px; }
+    .page-hero p { font-size: 18px; color: rgba(255,255,255,.75); max-width: 560px; }
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 40px 0 32px; }
+    .filter-btn { padding: 8px 20px; border-radius: 100px; font-size: 14px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--gray-100); background: var(--white); color: var(--text); transition: all .15s; font-family: inherit; }
+    .filter-btn:hover, .filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .case-card { background: var(--white); border: 1.5px solid var(--gray-100); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow .2s, transform .2s; }
+    .case-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .case-thumb { height: 200px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); display: flex; align-items: center; justify-content: center; font-size: 56px; position: relative; }
+    .case-type-badge { position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,.45); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 100px; }
+    .case-body { padding: 24px; }
+    .case-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+    .case-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; padding: 16px; background: var(--gray-50); border-radius: var(--radius-sm); }
+    .case-meta-item label { font-size: 11px; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 3px; }
+    .case-meta-item span { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .case-desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+    .case-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+    .case-tag { background: var(--gray-50); border: 0.5px solid var(--gray-100); border-radius: 100px; padding: 3px 10px; font-size: 12px; color: var(--gray-600); }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 56px; }
+    .stat-box { text-align: center; padding: 24px 16px; background: var(--navy); border-radius: var(--radius-lg); }
+    .stat-num { font-size: 32px; font-weight: 800; color: var(--gold); }
+    .stat-lbl { font-size: 13px; color: rgba(255,255,255,.65); margin-top: 6px; line-height: 1.4; }
+    @media (max-width: 900px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } .stats-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .cases-grid, .stats-row { grid-template-columns: 1fr; } .page-hero h1 { font-size: 30px; } }
+  </style>
+</head>
+<body>
+
+<header class="header" role="banner">
+  <div class="container">
+    <div class="header__inner">
+      <a href="index.html" class="logo"><div class="logo__icon">U</div>UniGroup</a>
+      <nav class="nav">
+        <a href="index.html#services">Услуги</a>
+        <a href="portfolio.html" style="color:#fff">Портфолио</a>
+        <a href="team.html">Команда</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header__right">
+        <a href="tel:+79990999808" class="header__phone">+7 (999) 099 98-08</a>
+        <a href="index.html#lead" class="btn btn--gold">Записаться на замер</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <nav style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:24px">
+      <a href="index.html" style="color:rgba(255,255,255,.6)">Главная</a> &rsaquo; Портфолио
+    </nav>
+    <div class="eyebrow">Наши работы</div>
+    <h1>370+ реализованных объектов в Москве</h1>
+    <p>Реальные проекты с площадями, сроками и бюджетами. Офисы, рестораны, гостиницы, магазины, учебные центры.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">370+</div><div class="stat-lbl">завершённых объектов</div></div>
+      <div class="stat-box"><div class="stat-num">180+</div><div class="stat-lbl">офисов</div></div>
+      <div class="stat-box"><div class="stat-num">80+</div><div class="stat-lbl">ресторанов и кафе</div></div>
+      <div class="stat-box"><div class="stat-num">40+</div><div class="stat-lbl">гостиниц и отелей</div></div>
+    </div>
+
+    <div class="filter-bar" role="group" aria-label="Фильтр по типу объекта">
+      <button class="filter-btn active" onclick="filter('all',this)">Все объекты</button>
+      <button class="filter-btn" onclick="filter('office',this)">Офисы</button>
+      <button class="filter-btn" onclick="filter('restaurant',this)">Рестораны</button>
+      <button class="filter-btn" onclick="filter('hotel',this)">Гостиницы</button>
+      <button class="filter-btn" onclick="filter('shop',this)">Магазины</button>
+      <button class="filter-btn" onclick="filter('edu',this)">Учебные центры</button>
+    </div>
+
+    <div class="cases-grid" id="casesGrid">
+
+      <article class="case-card" data-type="office">
+        <div class="case-thumb">🏢<span class="case-type-badge">Офис</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Капитальный ремонт IT-офиса, Павелецкая</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>420 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>9 недель</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 3,8 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Капитальный ремонт офиса IT-компании в БЦ класса B+ на Павелецкой. Open space на 60 рабочих мест, 3 переговорные, серверная, зона отдыха. Полная замена электрики, монтаж СКС и СКУД, акустические панели на потолках. Работали в режиме работающего офиса — поэтапно, без остановки бизнеса.</p>
+          <div class="case-tags">
+            <span class="case-tag">Капитальный</span><span class="case-tag">Open space</span><span class="case-tag">СКС</span><span class="case-tag">СКУД</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="restaurant">
+        <div class="case-thumb">🍽️<span class="case-type-badge">Ресторан</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Ресторан грузинской кухни, Чистые пруды</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>280 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>11 недель</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 4,2 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Ремонт ресторана под ключ в отдельно стоящем здании. Обеденный зал 160 м² на 80 гостей, профессиональная кухня 80 м², бар, гардероб, санузлы. Дизайн-проект в тбилисском стиле: кирпичная кладка, арки, тёплое освещение. Монтаж профессиональной вытяжной системы, жиросборников, пожарной автоматики.</p>
+          <div class="case-tags">
+            <span class="case-tag">Под ключ</span><span class="case-tag">Дизайн-проект</span><span class="case-tag">Профкухня</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="hotel">
+        <div class="case-thumb">🏨<span class="case-type-badge">Гостиница</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Реновация бутик-отеля, Китай-город</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>1 200 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>18 недель</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 12 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Полная реновация бутик-отеля на 28 номеров в историческом здании. Работали поэтапно блоками по 7 номеров — отель не закрывался на время ремонта. Новые ванные комнаты в каждом номере, замена всех инженерных систем, ремонт лобби и ресепшн, конференц-зал на 30 человек.</p>
+          <div class="case-tags">
+            <span class="case-tag">Реновация</span><span class="case-tag">Без закрытия</span><span class="case-tag">28 номеров</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="office">
+        <div class="case-thumb">🏢<span class="case-type-badge">Офис</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Офис финансовой компании, Москва-Сити</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>650 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>14 недель</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 9,5 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Ремонт офиса в башне Москва-Сити. Требования управляющей компании: работы только с 22:00 до 8:00 и в выходные. Полностью выдержали условия. Панорамные стеклянные перегородки, система умного освещения с датчиками движения, звукоизоляция переговорных комнат до 42 дБ.</p>
+          <div class="case-tags">
+            <span class="case-tag">Класс A</span><span class="case-tag">Умный офис</span><span class="case-tag">Ночные работы</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="shop">
+        <div class="case-thumb">🛍️<span class="case-type-badge">Магазин</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Сеть магазинов электроники, 5 точек</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>по 180 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>3 нед./точка</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 800 тыс./точка</span></div>
+          </div>
+          <p class="case-desc">Косметический ремонт 5 магазинов в разных ТЦ Москвы по единому фирменному стандарту. Разработали типовой проект, который адаптировали под каждое помещение. Все 5 точек сданы в течение 3 месяцев, каждая — в срок. Единый поставщик — единая ответственность.</p>
+          <div class="case-tags">
+            <span class="case-tag">Сеть магазинов</span><span class="case-tag">Типовой проект</span><span class="case-tag">5 объектов</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="edu">
+        <div class="case-thumb">🏫<span class="case-type-badge">Учебный центр</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Частная языковая школа, Арбат</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>340 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>7 недель</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 2,6 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Капитальный ремонт языковой школы: 8 учебных аудиторий, зона ожидания, административный блок, 2 санузла. Особое внимание — акустике: в каждом классе установлены звукопоглощающие панели. Все материалы сертифицированы для образовательных учреждений. Ремонт выполнен в летние каникулы — школа открылась точно 1 сентября.</p>
+          <div class="case-tags">
+            <span class="case-tag">Образование</span><span class="case-tag">Акустика</span><span class="case-tag">В срок к 1 сент.</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="restaurant">
+        <div class="case-thumb">☕<span class="case-type-badge">Кофейня</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Сеть кофеен, 8 точек формата to-go</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>от 25 до 60 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>2 нед./точка</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 350 тыс./точка</span></div>
+          </div>
+          <p class="case-desc">Открытие сети кофеен формата to-go в торговых центрах и на фудкортах. Каждая точка уникальна, но с единым брендовым ДНК. Работали параллельно на нескольких объектах одновременно — благодаря этому вся сеть вышла на рынок за 10 недель, а не за полгода.</p>
+          <div class="case-tags">
+            <span class="case-tag">Фудкорт</span><span class="case-tag">To-go формат</span><span class="case-tag">8 объектов</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="office">
+        <div class="case-thumb">🏢<span class="case-type-badge">Офис</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Косметический ремонт колл-центра, СВАО</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>520 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>5 недель</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 2,1 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Косметический ремонт офиса колл-центра без остановки работы — 120 операторов продолжали работать в смены. Делали ремонт блоками по 60 рабочих мест. Новые перегородки между рабочими зонами, замена потолков и освещения, перекладка напольного покрытия. Ни одного дня простоя для клиента.</p>
+          <div class="case-tags">
+            <span class="case-tag">Без остановки</span><span class="case-tag">Косметический</span><span class="case-tag">120 мест</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="hotel">
+        <div class="case-thumb">🏨<span class="case-type-badge">Отель</span></div>
+        <div class="case-body">
+          <h2 class="case-title">Апарт-отель, Ленинградский проспект</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>2 400 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>24 недели</span></div>
+            <div class="case-meta-item"><label>Бюджет</label><span>от 22 млн ₽</span></div>
+          </div>
+          <p class="case-desc">Один из крупнейших наших объектов — апарт-отель на 56 юнитов с подземным паркингом. Отделка с нуля в новостройке: стяжка, разводка всех коммуникаций, отделка каждого апартамента по дизайн-проекту. Параллельно — лобби, коридоры, технические помещения, фитнес-зона. Объект сдан без единого замечания.</p>
+          <div class="case-tags">
+            <span class="case-tag">Новостройка</span><span class="case-tag">56 апартаментов</span><span class="case-tag">Под ключ</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+      <p style="font-size:15px;color:var(--gray-600);margin-bottom:20px">Показаны 9 из 370+ проектов. Больше примеров — в нашем Telegram-канале</p>
+      <a href="https://t.me/EkimovAlexandr" target="_blank" rel="noopener" class="btn btn--gold btn--lg">Смотреть все работы в Telegram →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Обсудим ваш проект?</h2>
+    <p>Бесплатный выезд замерщика в день обращения · Смета за 2 дня</p>
+    <div class="cta-actions">
+      <a href="tel:+79990999808" class="btn btn--gold btn--lg">+7 (999) 099 98-08</a>
+      <a href="index.html#lead" class="btn btn--outline-white btn--lg">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__bottom" style="border-top:none;padding-top:0;justify-content:space-between">
+      <a href="index.html" class="logo"><div class="logo__icon">U</div>UniGroup</a>
+      <span style="font-size:13px;color:rgba(255,255,255,.4)">© 2015–2025 ООО «Юнигруп» · ИНН 7751269262</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filter(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.case-card').forEach(card => {
+    card.style.display = (type === 'all' || card.dataset.type === type) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
