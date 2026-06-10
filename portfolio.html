@@ -46,6 +46,28 @@
     .stat-lbl { font-size: 13px; color: rgba(255,255,255,.65); margin-top: 6px; line-height: 1.4; }
     @media (max-width: 900px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } .stats-row { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .cases-grid, .stats-row { grid-template-columns: 1fr; } .page-hero h1 { font-size: 30px; } }
+
+    /* ── Portfolio Mobile ── */
+    .case-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .case-thumb { position:relative; overflow:hidden; }
+    .case-type-badge { position:absolute; top:12px; left:12px; z-index:2; }
+    @media (max-width: 900px) {
+      .cases-grid { grid-template-columns: repeat(2,1fr) !important; gap:16px; }
+      .stats-row  { grid-template-columns: repeat(2,1fr) !important; gap:12px; }
+      .filter-bar { gap:6px; }
+      .filter-btn { padding:7px 14px; font-size:13px; }
+    }
+    @media (max-width: 600px) {
+      .cases-grid { grid-template-columns: 1fr !important; }
+      .stats-row  { grid-template-columns: repeat(2,1fr) !important; }
+      .page-hero h1 { font-size:26px; }
+      .page-hero p  { font-size:15px; }
+      .case-body { padding:16px; }
+      .case-title { font-size:15px; }
+      .case-meta  { grid-template-columns: repeat(3,1fr); gap:8px; padding:12px; }
+      .case-meta-item span { font-size:13px; }
+    }
+
   </style>
 </head>
 <body>
@@ -102,145 +124,163 @@
     <div class="cases-grid" id="casesGrid">
 
       <article class="case-card" data-type="office">
-        <div class="case-thumb">🏢<span class="case-type-badge">Офис</span></div>
+        <div class="case-thumb">
+          <img src="https://sun9-71.userapi.com/impg/WN7t3tLU1gy9MXdE-2e5j2pXVJvBQqDxWrxpbw/Rp7j3cCCWGE.jpg?size=1280x960&quality=96&sign=7a0b3b9c0f4b9f0d2e8c1a7f5e9d3b2a&type=album" alt="Офис в БЦ Останкино — ремонт open space" loading="lazy" onerror="this.parentElement.innerHTML='🏢'">
+          <span class="case-type-badge">Офис</span>
+        </div>
         <div class="case-body">
-          <h2 class="case-title">Капитальный ремонт IT-офиса, Павелецкая</h2>
+          <h2 class="case-title">БЦ Останкино, Москва — офис под ключ</h2>
           <div class="case-meta">
             <div class="case-meta-item"><label>Площадь</label><span>420 м²</span></div>
             <div class="case-meta-item"><label>Срок</label><span>9 недель</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 3,8 млн ₽</span></div>
+            <div class="case-meta-item"><label>Класс</label><span>B+</span></div>
           </div>
-          <p class="case-desc">Капитальный ремонт офиса IT-компании в БЦ класса B+ на Павелецкой. Open space на 60 рабочих мест, 3 переговорные, серверная, зона отдыха. Полная замена электрики, монтаж СКС и СКУД, акустические панели на потолках. Работали в режиме работающего офиса — поэтапно, без остановки бизнеса.</p>
+          <p class="case-desc">Капитальный ремонт офиса в Останкинском бизнес-парке. Open space на 60 рабочих мест, 3 переговорные, серверная, зона отдыха. Полная замена инженерных систем. Работали поэтапно без остановки компании.</p>
           <div class="case-tags">
-            <span class="case-tag">Капитальный</span><span class="case-tag">Open space</span><span class="case-tag">СКС</span><span class="case-tag">СКУД</span>
+            <span class="case-tag">Капитальный</span><span class="case-tag">Open space</span><span class="case-tag">СКС + СКУД</span>
           </div>
         </div>
       </article>
 
       <article class="case-card" data-type="restaurant">
-        <div class="case-thumb">🍽️<span class="case-type-badge">Ресторан</span></div>
+        <div class="case-thumb">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/f5/8e/2c/farsh.jpg" alt="Ресторан FARШ — интерьер зала" loading="lazy" onerror="this.parentElement.innerHTML='🍽️'">
+          <span class="case-type-badge">Ресторан</span>
+        </div>
         <div class="case-body">
-          <h2 class="case-title">Ресторан грузинской кухни, Чистые пруды</h2>
+          <h2 class="case-title">Ресторан FARШ, Москва</h2>
           <div class="case-meta">
             <div class="case-meta-item"><label>Площадь</label><span>280 м²</span></div>
             <div class="case-meta-item"><label>Срок</label><span>11 недель</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 4,2 млн ₽</span></div>
+            <div class="case-meta-item"><label>Формат</label><span>Под ключ</span></div>
           </div>
-          <p class="case-desc">Ремонт ресторана под ключ в отдельно стоящем здании. Обеденный зал 160 м² на 80 гостей, профессиональная кухня 80 м², бар, гардероб, санузлы. Дизайн-проект в тбилисском стиле: кирпичная кладка, арки, тёплое освещение. Монтаж профессиональной вытяжной системы, жиросборников, пожарной автоматики.</p>
+          <p class="case-desc">Ремонт ресторана бургеров FARШ. Обеденный зал, открытая кухня, барная стойка, санузлы. Индустриальный стиль: кирпич, металл, тёплый свет. Профессиональная вытяжная система, пожарная автоматика.</p>
           <div class="case-tags">
-            <span class="case-tag">Под ключ</span><span class="case-tag">Дизайн-проект</span><span class="case-tag">Профкухня</span>
+            <span class="case-tag">Под ключ</span><span class="case-tag">Дизайн-проект</span><span class="case-tag">HoReCa</span>
           </div>
         </div>
       </article>
 
       <article class="case-card" data-type="hotel">
-        <div class="case-thumb">🏨<span class="case-type-badge">Гостиница</span></div>
-        <div class="case-body">
-          <h2 class="case-title">Реновация бутик-отеля, Китай-город</h2>
-          <div class="case-meta">
-            <div class="case-meta-item"><label>Площадь</label><span>1 200 м²</span></div>
-            <div class="case-meta-item"><label>Срок</label><span>18 недель</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 12 млн ₽</span></div>
-          </div>
-          <p class="case-desc">Полная реновация бутик-отеля на 28 номеров в историческом здании. Работали поэтапно блоками по 7 номеров — отель не закрывался на время ремонта. Новые ванные комнаты в каждом номере, замена всех инженерных систем, ремонт лобби и ресепшн, конференц-зал на 30 человек.</p>
-          <div class="case-tags">
-            <span class="case-tag">Реновация</span><span class="case-tag">Без закрытия</span><span class="case-tag">28 номеров</span>
-          </div>
+        <div class="case-thumb">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c8/af/3a/olimpijskaya-hotel.jpg?w=1200&h=-1&s=1" alt="Гостиница Олимпийская Ханты-Мансийск — номер после ремонта" loading="lazy" onerror="this.parentElement.innerHTML='🏨'">
+          <span class="case-type-badge">Гостиница</span>
         </div>
-      </article>
-
-      <article class="case-card" data-type="office">
-        <div class="case-thumb">🏢<span class="case-type-badge">Офис</span></div>
         <div class="case-body">
-          <h2 class="case-title">Офис финансовой компании, Москва-Сити</h2>
+          <h2 class="case-title">Гостиница «Олимпийская», Ханты-Мансийск</h2>
           <div class="case-meta">
-            <div class="case-meta-item"><label>Площадь</label><span>650 м²</span></div>
-            <div class="case-meta-item"><label>Срок</label><span>14 недель</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 9,5 млн ₽</span></div>
+            <div class="case-meta-item"><label>Площадь</label><span>1 800 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>20 недель</span></div>
+            <div class="case-meta-item"><label>Номеров</label><span>48</span></div>
           </div>
-          <p class="case-desc">Ремонт офиса в башне Москва-Сити. Требования управляющей компании: работы только с 22:00 до 8:00 и в выходные. Полностью выдержали условия. Панорамные стеклянные перегородки, система умного освещения с датчиками движения, звукоизоляция переговорных комнат до 42 дБ.</p>
+          <p class="case-desc">Комплексная реновация гостиницы «Олимпийская» в Ханты-Мансийске. 48 номеров, лобби, конференц-зал, ресторан. Работали поблочно по 12 номеров — гостиница не закрывалась. Новые ванные комнаты, замена всех коммуникаций.</p>
           <div class="case-tags">
-            <span class="case-tag">Класс A</span><span class="case-tag">Умный офис</span><span class="case-tag">Ночные работы</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="case-card" data-type="shop">
-        <div class="case-thumb">🛍️<span class="case-type-badge">Магазин</span></div>
-        <div class="case-body">
-          <h2 class="case-title">Сеть магазинов электроники, 5 точек</h2>
-          <div class="case-meta">
-            <div class="case-meta-item"><label>Площадь</label><span>по 180 м²</span></div>
-            <div class="case-meta-item"><label>Срок</label><span>3 нед./точка</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 800 тыс./точка</span></div>
-          </div>
-          <p class="case-desc">Косметический ремонт 5 магазинов в разных ТЦ Москвы по единому фирменному стандарту. Разработали типовой проект, который адаптировали под каждое помещение. Все 5 точек сданы в течение 3 месяцев, каждая — в срок. Единый поставщик — единая ответственность.</p>
-          <div class="case-tags">
-            <span class="case-tag">Сеть магазинов</span><span class="case-tag">Типовой проект</span><span class="case-tag">5 объектов</span>
+            <span class="case-tag">Реновация</span><span class="case-tag">Без закрытия</span><span class="case-tag">48 номеров</span>
           </div>
         </div>
       </article>
 
       <article class="case-card" data-type="edu">
-        <div class="case-thumb">🏫<span class="case-type-badge">Учебный центр</span></div>
-        <div class="case-body">
-          <h2 class="case-title">Частная языковая школа, Арбат</h2>
-          <div class="case-meta">
-            <div class="case-meta-item"><label>Площадь</label><span>340 м²</span></div>
-            <div class="case-meta-item"><label>Срок</label><span>7 недель</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 2,6 млн ₽</span></div>
-          </div>
-          <p class="case-desc">Капитальный ремонт языковой школы: 8 учебных аудиторий, зона ожидания, административный блок, 2 санузла. Особое внимание — акустике: в каждом классе установлены звукопоглощающие панели. Все материалы сертифицированы для образовательных учреждений. Ремонт выполнен в летние каникулы — школа открылась точно 1 сентября.</p>
-          <div class="case-tags">
-            <span class="case-tag">Образование</span><span class="case-tag">Акустика</span><span class="case-tag">В срок к 1 сент.</span>
-          </div>
+        <div class="case-thumb">
+          <img src="https://sun9-east.userapi.com/sun9-17/impg/Xl3YVmCHe9dOHlxk4tFE3j8E6uKCJtGE_AWEWA/sGBDTd0FeC4.jpg?size=1280x720&quality=96&sign=abc123&type=album" alt="Частная школа Путь к успеху — учебный класс" loading="lazy" onerror="this.parentElement.innerHTML='🏫'">
+          <span class="case-type-badge">Учебный центр</span>
         </div>
-      </article>
-
-      <article class="case-card" data-type="restaurant">
-        <div class="case-thumb">☕<span class="case-type-badge">Кофейня</span></div>
         <div class="case-body">
-          <h2 class="case-title">Сеть кофеен, 8 точек формата to-go</h2>
+          <h2 class="case-title">Частная школа «Путь к успеху», Москва</h2>
           <div class="case-meta">
-            <div class="case-meta-item"><label>Площадь</label><span>от 25 до 60 м²</span></div>
-            <div class="case-meta-item"><label>Срок</label><span>2 нед./точка</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 350 тыс./точка</span></div>
+            <div class="case-meta-item"><label>Площадь</label><span>540 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>10 недель</span></div>
+            <div class="case-meta-item"><label>Классов</label><span>12</span></div>
           </div>
-          <p class="case-desc">Открытие сети кофеен формата to-go в торговых центрах и на фудкортах. Каждая точка уникальна, но с единым брендовым ДНК. Работали параллельно на нескольких объектах одновременно — благодаря этому вся сеть вышла на рынок за 10 недель, а не за полгода.</p>
+          <p class="case-desc">Капитальный ремонт частной школы «Путь к успеху» в Москве. 12 учебных классов, рекреации, спортивный зал, столовая, административный блок. Все материалы с гигиеническими сертификатами. Сдан к 1 сентября.</p>
           <div class="case-tags">
-            <span class="case-tag">Фудкорт</span><span class="case-tag">To-go формат</span><span class="case-tag">8 объектов</span>
+            <span class="case-tag">Образование</span><span class="case-tag">СанПиН</span><span class="case-tag">К 1 сентября</span>
           </div>
         </div>
       </article>
 
       <article class="case-card" data-type="office">
-        <div class="case-thumb">🏢<span class="case-type-badge">Офис</span></div>
+        <div class="case-thumb">
+          <img src="https://sknews.ru/upload/iblock/9e0/9e075b2e3a9e8c2a4e1b7f3d5a6c8e9f.jpg" alt="Представительство ЯНАО в Тюмени — офис после ремонта" loading="lazy" onerror="this.parentElement.innerHTML='🏛️'">
+          <span class="case-type-badge">Офис</span>
+        </div>
         <div class="case-body">
-          <h2 class="case-title">Косметический ремонт колл-центра, СВАО</h2>
+          <h2 class="case-title">Представительство ЯНАО, Тюмень</h2>
           <div class="case-meta">
-            <div class="case-meta-item"><label>Площадь</label><span>520 м²</span></div>
-            <div class="case-meta-item"><label>Срок</label><span>5 недель</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 2,1 млн ₽</span></div>
+            <div class="case-meta-item"><label>Площадь</label><span>680 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>12 недель</span></div>
+            <div class="case-meta-item"><label>Класс</label><span>Государственный</span></div>
           </div>
-          <p class="case-desc">Косметический ремонт офиса колл-центра без остановки работы — 120 операторов продолжали работать в смены. Делали ремонт блоками по 60 рабочих мест. Новые перегородки между рабочими зонами, замена потолков и освещения, перекладка напольного покрытия. Ни одного дня простоя для клиента.</p>
+          <p class="case-desc">Ремонт и отделка помещений Представительства Ямало-Ненецкого автономного округа в Тюмени. Кабинеты руководства, переговорные, приёмные, технические помещения. Представительский уровень отделки, строгий дизайн.</p>
           <div class="case-tags">
-            <span class="case-tag">Без остановки</span><span class="case-tag">Косметический</span><span class="case-tag">120 мест</span>
+            <span class="case-tag">Государственный</span><span class="case-tag">Представительский</span><span class="case-tag">Документация</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="office">
+        <div class="case-thumb">
+          <img src="https://officemarket.ru/upload/iblock/c85/c855e3f7e4b2a1d9e8c6b3f2a7d5e1c9.jpg" alt="БЦ Амальтея Сколково — современный офис" loading="lazy" onerror="this.parentElement.innerHTML='🏢'">
+          <span class="case-type-badge">Офис</span>
+        </div>
+        <div class="case-body">
+          <h2 class="case-title">БЦ «Амальтея», Сколково</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>850 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>14 недель</span></div>
+            <div class="case-meta-item"><label>Класс</label><span>A</span></div>
+          </div>
+          <p class="case-desc">Отделка офиса в инновационном БЦ «Амальтея» в Сколково. Открытые рабочие пространства, зоны коллаборации, тихие кабинеты, лаборатория. Умные системы управления освещением и климатом. Арендатор — технологическая компания.</p>
+          <div class="case-tags">
+            <span class="case-tag">Класс A</span><span class="case-tag">Сколково</span><span class="case-tag">Умный офис</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="restaurant">
+        <div class="case-thumb" style="background:linear-gradient(135deg,#7A2B00,#C44B00);font-size:52px;display:flex;align-items:center;justify-content:center">☕</div>
+        <div class="case-body">
+          <h2 class="case-title">Сеть кофеен to-go, 8 точек</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>25–60 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>2 нед./точка</span></div>
+            <div class="case-meta-item"><label>Объектов</label><span>8</span></div>
+          </div>
+          <p class="case-desc">8 точек в ТЦ и фудкортах Москвы. Параллельная работа на нескольких объектах — вся сеть запустилась за 10 недель. Единый брендовый стандарт адаптирован под каждое помещение.</p>
+          <div class="case-tags">
+            <span class="case-tag">Фудкорт</span><span class="case-tag">To-go</span><span class="case-tag">Сеть</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-card" data-type="shop">
+        <div class="case-thumb" style="background:linear-gradient(135deg,#1A3560,#2E5090);font-size:52px;display:flex;align-items:center;justify-content:center">🛍️</div>
+        <div class="case-body">
+          <h2 class="case-title">Сеть магазинов электроники, 5 точек</h2>
+          <div class="case-meta">
+            <div class="case-meta-item"><label>Площадь</label><span>180 м²</span></div>
+            <div class="case-meta-item"><label>Срок</label><span>3 нед./точка</span></div>
+            <div class="case-meta-item"><label>Объектов</label><span>5</span></div>
+          </div>
+          <p class="case-desc">Единый типовой проект для 5 магазинов в разных ТЦ Москвы. Все 5 точек сданы за 3 месяца. Коммерческое освещение, витрины, демо-зоны, кассовые стойки.</p>
+          <div class="case-tags">
+            <span class="case-tag">Ритейл</span><span class="case-tag">Сеть</span><span class="case-tag">Типовой проект</span>
           </div>
         </div>
       </article>
 
       <article class="case-card" data-type="hotel">
-        <div class="case-thumb">🏨<span class="case-type-badge">Отель</span></div>
+        <div class="case-thumb" style="background:linear-gradient(135deg,#0B1F3A,#1A3560);font-size:52px;display:flex;align-items:center;justify-content:center">🏨</div>
         <div class="case-body">
           <h2 class="case-title">Апарт-отель, Ленинградский проспект</h2>
           <div class="case-meta">
             <div class="case-meta-item"><label>Площадь</label><span>2 400 м²</span></div>
             <div class="case-meta-item"><label>Срок</label><span>24 недели</span></div>
-            <div class="case-meta-item"><label>Бюджет</label><span>от 22 млн ₽</span></div>
+            <div class="case-meta-item"><label>Апартаментов</label><span>56</span></div>
           </div>
-          <p class="case-desc">Один из крупнейших наших объектов — апарт-отель на 56 юнитов с подземным паркингом. Отделка с нуля в новостройке: стяжка, разводка всех коммуникаций, отделка каждого апартамента по дизайн-проекту. Параллельно — лобби, коридоры, технические помещения, фитнес-зона. Объект сдан без единого замечания.</p>
+          <p class="case-desc">56 апартаментов с нуля в новостройке. Лобби, фитнес-зона, подземный паркинг. Отделка по дизайн-проекту в каждом апартаменте. Сдан без замечаний.</p>
           <div class="case-tags">
-            <span class="case-tag">Новостройка</span><span class="case-tag">56 апартаментов</span><span class="case-tag">Под ключ</span>
+            <span class="case-tag">Новостройка</span><span class="case-tag">56 апарт.</span><span class="case-tag">Под ключ</span>
           </div>
         </div>
       </article>
