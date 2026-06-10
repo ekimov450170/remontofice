@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Блог UniGroup — экспертные статьи о ремонте коммерческих помещений</title>
+  <meta name="description" content="Экспертные статьи о ремонте офисов, ресторанов, гостиниц и магазинов в Москве. Практические руководства, советы по приёмке, выбору подрядчика и планированию ремонта.">
+  <link rel="canonical" href="https://ремонтофиса.москва/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .page-hero{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;padding:64px 0 56px}
+    .page-hero h1{font-size:38px;font-weight:800;margin-bottom:12px}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,.75);max-width:520px}
+    .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+    .post-card{background:var(--white);border:1.5px solid var(--gray-100);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .2s,transform .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+    .post-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);text-decoration:none}
+    .post-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:52px}
+    .post-body{padding:22px;flex:1;display:flex;flex-direction:column}
+    .post-cat{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+    .post-title{font-size:17px;font-weight:800;margin-bottom:10px;line-height:1.35}
+    .post-desc{font-size:14px;color:var(--gray-600);line-height:1.65;flex:1}
+    .post-meta{display:flex;gap:12px;margin-top:14px;font-size:12px;color:var(--gray-400)}
+    @media(max-width:900px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.posts-grid{grid-template-columns:1fr}.page-hero h1{font-size:28px}}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="../index.html" class="logo"><div class="logo__icon">U</div>UniGroup</a>
+      <nav class="nav">
+        <a href="../index.html#services">Услуги</a>
+        <a href="../portfolio.html">Портфолио</a>
+        <a href="../team.html">Команда</a>
+        <a href="index.html" style="color:#fff">Блог</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header__right">
+        <a href="tel:+79990999808" class="header__phone">+7 (999) 099 98-08</a>
+        <a href="../index.html#lead" class="btn btn--gold">Записаться на замер</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Блог</div>
+    <h1>Экспертные статьи о ремонте</h1>
+    <p>Практические руководства от специалистов UniGroup: как выбрать подрядчика, принять ремонт, спланировать бюджет и сроки.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="posts-grid">
+
+      <a href="kak-vybrat-podryadchika.html" class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,var(--navy),var(--navy-light))">📋</div>
+        <div class="post-body">
+          <div class="post-cat">Руководство</div>
+          <div class="post-title">Как выбрать подрядчика для ремонта коммерческого помещения: 8 критериев</div>
+          <div class="post-desc">Что проверить до подписания договора: документы, портфолио, смета, гарантии. Красные флаги, которые говорят — бегите.</div>
+          <div class="post-meta"><span>⏱ 8 мин</span><span>Июнь 2025</span></div>
+        </div>
+      </a>
+
+      <a href="byudzhet-remonta-ofisa.html" class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#1A5C1A,#2E8B57)">💰</div>
+        <div class="post-body">
+          <div class="post-cat">Финансы</div>
+          <div class="post-title">Бюджет ремонта офиса: из чего складывается стоимость и где можно сэкономить</div>
+          <div class="post-desc">Разбираем смету капитального ремонта офиса 300 м² по статьям. Где реально сэкономить, а где экономия выйдет боком.</div>
+          <div class="post-meta"><span>⏱ 7 мин</span><span>Июнь 2025</span></div>
+        </div>
+      </a>
+
+      <a href="remont-bez-ostanovki.html" class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#7A5C10,#B8860B)">🏗️</div>
+        <div class="post-body">
+          <div class="post-cat">Организация</div>
+          <div class="post-title">Ремонт офиса без остановки работы: пошаговый план</div>
+          <div class="post-desc">Как организовать поэтапный ремонт так, чтобы 80 сотрудников продолжали работать. Реальная схема с таймингом.</div>
+          <div class="post-meta"><span>⏱ 6 мин</span><span>Май 2025</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__bottom" style="border-top:none;padding-top:0;justify-content:space-between">
+      <a href="../index.html" class="logo"><div class="logo__icon">U</div>UniGroup</a>
+      <span style="font-size:13px;color:rgba(255,255,255,.4)">© 2015–2025 ООО «Юнигруп»</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
