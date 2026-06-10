@@ -191,7 +191,9 @@
         <h2 class="form-card__title">Рассчитайте стоимость ремонта</h2>
         <p class="form-card__sub">Бесплатный выезд замерщика · Ответ за 2 часа</p>
 
-        <form id="leadForm" novalidate>
+        <form id="leadForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Новая заявка с сайта UniGroup">
+          <input type="hidden" name="_language" value="ru">
           <div class="form-group">
             <label for="f-name">Ваше имя</label>
             <input type="text" id="f-name" name="name" placeholder="Иван Петров" required>
