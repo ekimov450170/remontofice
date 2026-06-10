@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://forumpro.tilda.ws/sitemap.xml
