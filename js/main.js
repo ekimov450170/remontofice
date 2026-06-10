@@ -25,20 +25,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Lead form ── */
+  /* ── Lead form (Formspree) ── */
   const form = document.getElementById('leadForm');
-  form?.addEventListener('submit', e => {
+  form?.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('[type=submit]');
+    const originalText = btn.textContent;
     btn.textContent = 'Отправляем…';
     btn.disabled = true;
-    setTimeout(() => {
-      form.innerHTML = `<div style="text-align:center;padding:32px 0">
-        <div style="font-size:44px;margin-bottom:14px">✅</div>
-        <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;color:#0B1F3A">Заявка отправлена!</h3>
-        <p style="color:#6B7280;font-size:15px">Наш менеджер перезвонит вам<br>в течение 2 часов</p>
-      </div>`;
-    }, 1000);
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.innerHTML = `<div style="text-align:center;padding:32px 0">
+          <div style="font-size:44px;margin-bottom:14px">✅</div>
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;color:#0B1F3A">Заявка отправлена!</h3>
+          <p style="color:#6B7280;font-size:15px">Наш менеджер перезвонит вам<br>в течение 2 часов</p>
+        </div>`;
+      } else {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        alert('Ошибка отправки. Позвоните нам: +7 (999) 099 98-08');
+      }
+    } catch (err) {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      alert('Ошибка отправки. Позвоните нам: +7 (999) 099 98-08');
+    }
   });
 
   /* ── Smooth anchors ── */
