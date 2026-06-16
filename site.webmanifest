@@ -1,0 +1,13 @@
+{
+  "name": "UniGroup — Ремонт коммерческих помещений",
+  "short_name": "UniGroup",
+  "description": "Ремонт офисов, ресторанов, гостиниц в Москве под ключ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3A",
+  "theme_color": "#D4A843",
+  "icons": [
+    { "src": "/images/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/favicon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
